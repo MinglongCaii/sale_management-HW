@@ -17,8 +17,8 @@ export class CategoriesService {
     return this.repo.save(this.repo.create(dto));
   }
 
-  findAll() {
-    return this.repo.find();
+  async findAll() {
+    return await this.repo.find();
   }
 
   async findOne(id: number) {

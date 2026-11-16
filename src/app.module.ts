@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { CategoriesModule } from './categories/categories.module';
 import { TagsModule } from './tags/tags.module';
 import { ProductsModule } from './products/products.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [CategoriesModule, TagsModule, ProductsModule,
