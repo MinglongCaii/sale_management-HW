@@ -16,7 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     password: process.env.DATABASE_PASSWORD??'postgres',
     database: 'sales',
     autoLoadEntities: true,
-    synchronize: true, // TEMPORARY: we replace this with migrations later
+    synchronize: false, // TEMPORARY: we replace this with migrations later
 }),
   ],
   controllers: [AppController],
