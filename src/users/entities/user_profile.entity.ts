@@ -4,14 +4,15 @@ import { User } from "./user.entity";
 @Entity('Users Profile')
 export class Profile {
     @PrimaryGeneratedColumn()
-    id: string;
+    id: number;
 
     @Column()
     fullName: string;
 
     @Column()
-    age: string;
+    age: number;
 
     @OneToOne(() => User, (u) => u.profile)
     user: User;
+    
 }

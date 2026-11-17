@@ -21,21 +21,14 @@ export class ProductsService {
     return await this.repo.find();
   }
 
-  async findByCategory(ids: number[]) { //FE handles what to send id instead of names.
-    return await this.repo.find({ where: { category: { id : In(ids)}}});
+  async findByCategory(id: number) {
+    return await this.repo.find({ where: { category: { id : id}}});
   }
 
-  async findOne(id: number) {
-      const category = await this.repo.findOneBy({ id });
-      if (!category) throw new NotFoundException(`Category ${id} not found`);
-      return category;
+  async findOneProduct(id: number) {
+      const product = await this.repo.findOneBy({ id });
+      if (!product) throw new NotFoundException(`Product ${id} not found`);
+      return product;
   }
 
-  update(id: number, updateProductDto: UpdateProductDto) {
-    return `This action updates a #${id} product`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} product`;
-  }
 }

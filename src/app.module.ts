@@ -5,9 +5,11 @@ import { CategoriesModule } from './categories/categories.module';
 import { TagsModule } from './tags/tags.module';
 import { ProductsModule } from './products/products.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { OrdersModule } from './orders/orders.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [CategoriesModule, TagsModule, ProductsModule,
+  imports: [CategoriesModule, TagsModule, ProductsModule, UsersModule, OrdersModule,
     TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
