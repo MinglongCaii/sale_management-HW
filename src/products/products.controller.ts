@@ -14,7 +14,7 @@ export class ProductsController {
     return this.productsService.create(createProductDto);
   }
 
-  @Get()
+  @Get('by-category')
   findByCategory(@Query('categoryId', new ParseIntPipe({ optional: true })) categoryId?: number,)
      {
       return this.productsService.findByCategory(categoryId); //working on this atm

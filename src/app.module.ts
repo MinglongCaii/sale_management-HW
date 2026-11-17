@@ -18,7 +18,7 @@ import { UsersModule } from './users/users.module';
     password: process.env.DATABASE_PASSWORD??'postgres',
     database: 'sales',
     autoLoadEntities: true,
-    synchronize: false, // TEMPORARY: we replace this with migrations later
+    synchronize: true, // TEMPORARY: we replace this with migrations later
 }),
   ],
   controllers: [AppController],

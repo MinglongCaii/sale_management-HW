@@ -8,6 +8,7 @@ export class Order {
     @PrimaryGeneratedColumn() id: number;
     @Column() name: string;
     @Column() userId: number;
+    @Column({default: 0}) totalPrice: number;
 
     @OneToMany(() => OrderItem,(uo) => uo.order)
     orderItem: OrderItem[];
